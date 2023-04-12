@@ -20,7 +20,7 @@ local Config = {
 function CreateEsp(Player)
     local Box,BoxOutline,Name,HealthBar,HealthBarOutline = Drawing.new("Square"),Drawing.new("Square"),Drawing.new("Text"),Drawing.new("Square"),Drawing.new("Square")
     local Updater = game:GetService("RunService").RenderStepped:Connect(function()
-    if Player.Character ~= nil and Player.Character:FindFirstChild("Humanoid") ~= nil and Player:FindFirstChild("bin") and Player:FindFirstChild("bin") ~= nil and Player.Character:FindFirstChild("HumanoidRootPart") ~= nil and Player.Character.Humanoid.Health > 0 and Player.Character:FindFirstChild("Head") ~= nil and getgenv().EspEnabled then
+    if Player.Character ~= nil and Player.Character:FindFirstChild("Humanoid") ~= nil and Player.Character:FindFirstChild("HumanoidRootPart") ~= nil and Player.Character.Humanoid.Health > 0 and Player.Character:FindFirstChild("Head") ~= nil and getgenv().EspEnabled then
             local Target2dPosition,IsVisible = workspace.CurrentCamera:WorldToViewportPoint(Player.Character.HumanoidRootPart.Position)
             local scale_factor = 1 / (Target2dPosition.Z * math.tan(math.rad(workspace.CurrentCamera.FieldOfView * 0.5)) * 2) * 100
             local width, height = math.floor(40 * scale_factor), math.floor(60 * scale_factor)
