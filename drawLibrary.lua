@@ -352,7 +352,7 @@ library.createToggle = function(option, parent)
         Size = UDim2.new(1, 0, 1, 0),
         BackgroundTransparency = 1,
         Text = option.text,
-        TextColor3 = option.state and Color3.fromRGB(210, 210, 210) or Color3.fromRGB(180, 180, 180),
+        TextColor3 = option.state and Color3.fromRGB(210, 210, 210) or Color3.fromRGB(165, 165, 165),
         TextSize = 15,
         Font = Enum.Font.Code,
         TextXAlignment = Enum.TextXAlignment.Left,
@@ -410,7 +410,7 @@ library.createToggle = function(option, parent)
         state = state or false
         library.flags[self.flag] = state
         self.state = state
-        option.title.TextColor3 = state and Color3.fromRGB(210, 210, 210) or Color3.fromRGB(180, 180, 180)
+        option.title.TextColor3 = state and Color3.fromRGB(210, 210, 210) or Color3.fromRGB(165, 165, 165)
         if option.style then
             tickboxOverlay.Visible = state
         else
