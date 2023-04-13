@@ -410,7 +410,7 @@ library.createToggle = function(option, parent)
         state = state or false
         library.flags[self.flag] = state
         self.state = state
-        option.title.TextColor3 = state and Color3.fromRGB(235, 235, 235) or Color3.fromRGB(180, 180, 180)
+        option.title.TextColor3 = state and Color3.fromRGB(210, 210, 210) or Color3.fromRGB(180, 180, 180)
         if option.style then
             tickboxOverlay.Visible = state
         else
