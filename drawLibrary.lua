@@ -6,7 +6,7 @@ getgenv().tweenService = game:GetService"TweenService"
 
 -- Perfect Color - 56, 122, 241
     
-local uicolor = Color3.fromRGB(56, 122, 241)
+local uicolor = Color3.fromRGB(52, 112, 222)
 
 if getgenv().library then
     getgenv().library:Unload()
