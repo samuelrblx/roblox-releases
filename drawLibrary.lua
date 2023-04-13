@@ -2120,7 +2120,7 @@ function library:AddTab(title, pos)
                 self.content = library:Create("Frame", {
                     Size = UDim2.new(1, 0, 1, 0),
                     BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                    BorderColor3 = Color3.fromRGB(60, 60, 60),
+                    BorderColor3 = Color3.fromRGB(35, 35, 35),
                     BorderMode = Enum.BorderMode.Inset,
                     Parent = self.main
                 })
@@ -2478,7 +2478,7 @@ function library:Init()
         AutoButtonColor = false,
         Position = UDim2.new(0, 100, 0, 46),
         Size = UDim2.new(0, 500, 0, 600),
-        BackgroundColor3 = Color3.fromRGB(20, 20, 20),
+        BackgroundColor3 = Color3.fromRGB(18, 18, 18),
         BorderColor3 = Color3.new(),
         ScaleType = Enum.ScaleType.Tile,
         Modal = true,
