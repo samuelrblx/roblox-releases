@@ -6,12 +6,7 @@ getgenv().tweenService = game:GetService"TweenService"
 
 -- 24, 117, 223
 -- 52, 112, 222
-		
--- 37, 121, 207
--- 40, 132, 226
-		
--- 34, 131, 241
--- 36, 119, 204
+
     
 local uicolor = Color3.fromRGB(52, 112, 222)
 
@@ -19,7 +14,7 @@ if getgenv().library then
     getgenv().library:Unload()
 end
 
-local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = '$amuelhook', open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "$amuelhook", fileext = ".txt"}
+local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = '$amuelhook - build id: d9f86a9f1040', open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "$amuelhook", fileext = ".txt"}
 getgenv().library = library
 
 --Locals
