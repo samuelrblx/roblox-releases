@@ -5,8 +5,10 @@ getgenv().inputService = game:GetService"UserInputService"
 getgenv().tweenService = game:GetService"TweenService"
 
 -- Perfect Color - 56, 122, 241
+-- 48, 70, 128
+-- 52, 112, 222
     
-local uicolor = Color3.fromRGB(52, 112, 222)
+local uicolor = Color3.fromRGB(48, 70, 128)
 
 if getgenv().library then
     getgenv().library:Unload()
@@ -320,7 +322,7 @@ library.createToggle = function(option, parent)
             Size = UDim2.new(1, 0, 1, 0),
             BackgroundTransparency = 1,
             Image = "rbxassetid://2592362371",
-            ImageColor3 = Color3.fromRGB(45, 45, 45),
+            ImageColor3 = Color3.fromRGB(50, 50, 50),
             ScaleType = Enum.ScaleType.Slice,
             SliceCenter = Rect.new(2, 2, 62, 62),
             Parent = tickbox
@@ -2120,7 +2122,7 @@ function library:AddTab(title, pos)
                 self.content = library:Create("Frame", {
                     Size = UDim2.new(1, 0, 1, 0),
                     BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                    BorderColor3 = Color3.fromRGB(35, 35, 35),
+                    BorderColor3 = Color3.fromRGB(60, 60, 60),
                     BorderMode = Enum.BorderMode.Inset,
                     Parent = self.main
                 })
@@ -2454,19 +2456,13 @@ end
 
 function library:Close()
     self.open = not self.open
-		if self.open then
-			inputService.MouseIconEnabled = false
-		else
-			inputService.MouseIconEnabled = self.mousestate
+
+	if self.main then
+		if self.popup then
+			self.popup:Close()
 		end
-		if self.main then
-			if self.popup then
-				self.popup:Close()
-			end
-			self.main.Visible = self.open
-			self.cursor.Visible  = self.open
-			self.cursor1.Visible  = self.open
-		end
+		self.main.Visible = self.open
+	end
 end
 
 function library:Init()
@@ -2485,7 +2481,7 @@ function library:Init()
         AutoButtonColor = false,
         Position = UDim2.new(0, 100, 0, 46),
         Size = UDim2.new(0, 500, 0, 600),
-        BackgroundColor3 = Color3.fromRGB(18, 18, 18),
+        BackgroundColor3 = Color3.fromRGB(20, 20, 20),
         BorderColor3 = Color3.new(),
         ScaleType = Enum.ScaleType.Tile,
         Modal = true,
@@ -2550,16 +2546,6 @@ function library:Init()
         BackgroundTransparency = 1,
         Parent = self.main
     })
-
-        self.cursor = self:Create("Triangle", {
-			Color = Color3.fromRGB(180, 180, 180),
-			Transparency = 0.6,
-		})
-		
-		self.cursor1 = self:Create("Triangle", {
-			Color = Color3.fromRGB(240, 240, 240),
-			Transparency = 0.6,
-		})
 
     self.tooltip = self:Create("TextLabel", {
         ZIndex = 2,
@@ -2675,16 +2661,6 @@ function library:Init()
         if not self.open then return end
         
         if input.UserInputType.Name == "MouseMovement" then
-            if self.cursor then
-				local mouse = inputService:GetMouseLocation()
-				local MousePos = Vector2.new(mouse.X, mouse.Y)
-				self.cursor.PointA = MousePos
-				self.cursor.PointB = MousePos + Vector2.new(12, 12)
-				self.cursor.PointC = MousePos + Vector2.new(12, 12)
-				self.cursor1.PointA = MousePos
-				self.cursor1.PointB = MousePos + Vector2.new(11, 11)
-				self.cursor1.PointC = MousePos + Vector2.new(11, 11)
-			end
             if self.slider then
                 self.slider:SetValue(self.slider.min + ((input.Position.X - self.slider.slider.AbsolutePosition.X) / self.slider.slider.AbsoluteSize.X) * (self.slider.max - self.slider.min))
             end
