@@ -575,7 +575,7 @@ library.createBind = function(option, parent)
     interest.InputEnded:connect(function(input)
         if input.UserInputType.Name == "MouseButton1" then
             binding = true
-            bindinput.Text = "..."
+            bindinput.Text = "[...]"
             bindinput.Size = UDim2.new(0, -textService:GetTextSize(bindinput.Text, 16, Enum.Font.Code, Vector2.new(9e9, 9e9)).X, 0, 16)
             bindinput.TextColor3 = uicolor
         end
