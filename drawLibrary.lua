@@ -324,7 +324,7 @@ library.createToggle = function(option, parent)
             Size = UDim2.new(1, 0, 1, 0),
             BackgroundTransparency = 1,
             Image = "rbxassetid://2592362371",
-            ImageColor3 = Color3.fromRGB(45, 45, 45),
+            ImageColor3 = Color3.fromRGB(60, 60, 60),
             ScaleType = Enum.ScaleType.Slice,
             SliceCenter = Rect.new(2, 2, 62, 62),
             Parent = tickbox
@@ -2124,7 +2124,7 @@ function library:AddTab(title, pos)
                 self.content = library:Create("Frame", {
                     Size = UDim2.new(1, 0, 1, 0),
                     BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                    BorderColor3 = Color3.fromRGB(35, 35, 35),
+                    BorderColor3 = Color3.fromRGB(60, 60, 60),
                     BorderMode = Enum.BorderMode.Inset,
                     Parent = self.main
                 })
