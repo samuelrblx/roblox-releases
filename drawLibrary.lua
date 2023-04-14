@@ -6,8 +6,10 @@ getgenv().tweenService = game:GetService"TweenService"
 
 -- 24, 117, 223
 -- 52, 112, 222
+		
+-- 37, 121, 207
     
-local uicolor = Color3.fromRGB(24, 117, 223)
+local uicolor = Color3.fromRGB(37, 121, 207)
 
 if getgenv().library then
     getgenv().library:Unload()
