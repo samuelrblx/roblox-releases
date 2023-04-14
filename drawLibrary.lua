@@ -2510,7 +2510,7 @@ function library:Init()
         BackgroundTransparency = 1,
         Text = tostring(self.title),
         Font = Enum.Font.Code,
-        TextSize = 17,
+        TextSize = 16,
         TextColor3 = Color3.new(1, 1, 1),
         TextXAlignment = Enum.TextXAlignment.Left,
         Parent = self.main
