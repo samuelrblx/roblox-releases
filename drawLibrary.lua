@@ -4,8 +4,7 @@ getgenv().textService = game:GetService"TextService"
 getgenv().inputService = game:GetService"UserInputService"
 getgenv().tweenService = game:GetService"TweenService"
 
--- Perfect Color - 56, 122, 241
--- 48,70,128
+-- 24, 117, 223
 -- 52, 112, 222
     
 local uicolor = Color3.fromRGB(24, 117, 223)
