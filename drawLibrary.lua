@@ -5,6 +5,8 @@ getgenv().inputService = game:GetService"UserInputService"
 getgenv().tweenService = game:GetService"TweenService"
 
 -- Perfect Color - 56, 122, 241
+-- 48,70,128
+-- 52, 112, 222
     
 local uicolor = Color3.fromRGB(52, 112, 222)
 
@@ -320,7 +322,7 @@ library.createToggle = function(option, parent)
             Size = UDim2.new(1, 0, 1, 0),
             BackgroundTransparency = 1,
             Image = "rbxassetid://2592362371",
-            ImageColor3 = Color3.fromRGB(50, 50, 50),
+            ImageColor3 = Color3.fromRGB(45, 45, 45),
             ScaleType = Enum.ScaleType.Slice,
             SliceCenter = Rect.new(2, 2, 62, 62),
             Parent = tickbox
@@ -2120,7 +2122,7 @@ function library:AddTab(title, pos)
                 self.content = library:Create("Frame", {
                     Size = UDim2.new(1, 0, 1, 0),
                     BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                    BorderColor3 = Color3.fromRGB(60, 60, 60),
+                    BorderColor3 = Color3.fromRGB(35, 35, 35),
                     BorderMode = Enum.BorderMode.Inset,
                     Parent = self.main
                 })
