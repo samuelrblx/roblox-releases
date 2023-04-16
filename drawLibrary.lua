@@ -2499,7 +2499,7 @@ function library:Init()
 
     local ImageGradient = Instance.new("ImageLabel", self.top)
     ImageGradient.Image = "rbxassetid://2454009026"
-    ImageGradient.ImageTransparency = 0.6
+    ImageGradient.ImageTransparency = 0.65
     ImageGradient.Size = UDim2.new(1, 0, 1, 0)
     ImageGradient.BackgroundTransparency = 1 
     ImageGradient.ImageColor3 = Color3.fromRGB(0, 0, 0)
