@@ -322,7 +322,7 @@ library.createToggle = function(option, parent)
             Size = UDim2.new(1, 0, 1, 0),
             BackgroundTransparency = 1,
             Image = "rbxassetid://2592362371",
-            ImageColor3 = Color3.fromRGB(60, 60, 60),
+            ImageColor3 = Color3.fromRGB(50, 50, 50),
             ScaleType = Enum.ScaleType.Slice,
             SliceCenter = Rect.new(2, 2, 62, 62),
             Parent = tickbox
@@ -354,7 +354,7 @@ library.createToggle = function(option, parent)
         Size = UDim2.new(1, 0, 1, 0),
         BackgroundTransparency = 1,
         Text = option.text,
-        TextColor3 = option.state and Color3.fromRGB(210, 210, 210) or Color3.fromRGB(180, 180, 180),
+        TextColor3 = option.state and Color3.fromRGB(195, 195, 195) or Color3.fromRGB(165, 165, 165),
         TextSize = 15,
         Font = Enum.Font.Code,
         TextXAlignment = Enum.TextXAlignment.Left,
@@ -412,7 +412,7 @@ library.createToggle = function(option, parent)
         state = state or false
         library.flags[self.flag] = state
         self.state = state
-        option.title.TextColor3 = state and Color3.fromRGB(210, 210, 210) or Color3.fromRGB(180, 180, 180)
+        option.title.TextColor3 = state and Color3.fromRGB(195, 195, 195) or Color3.fromRGB(165, 165, 165)
         if option.style then
             tickboxOverlay.Visible = state
         else
@@ -2122,7 +2122,7 @@ function library:AddTab(title, pos)
                 self.content = library:Create("Frame", {
                     Size = UDim2.new(1, 0, 1, 0),
                     BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                    BorderColor3 = Color3.fromRGB(60, 60, 60),
+                    BorderColor3 = Color3.fromRGB(35, 35, 35),
                     BorderMode = Enum.BorderMode.Inset,
                     Parent = self.main
                 })
@@ -2481,7 +2481,7 @@ function library:Init()
         AutoButtonColor = false,
         Position = UDim2.new(0, 100, 0, 46),
         Size = UDim2.new(0, 500, 0, 600),
-        BackgroundColor3 = Color3.fromRGB(20, 20, 20),
+        BackgroundColor3 = Color3.fromRGB(18, 18, 18),
         BorderColor3 = Color3.new(),
         ScaleType = Enum.ScaleType.Tile,
         Modal = true,
@@ -2499,7 +2499,7 @@ function library:Init()
 
     local ImageGradient = Instance.new("ImageLabel", self.top)
     ImageGradient.Image = "rbxassetid://2454009026"
-    ImageGradient.ImageTransparency = 0.65
+    ImageGradient.ImageTransparency = 0.55
     ImageGradient.Size = UDim2.new(1, 0, 1, 0)
     ImageGradient.BackgroundTransparency = 1 
     ImageGradient.ImageColor3 = Color3.fromRGB(0, 0, 0)
