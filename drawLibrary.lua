@@ -14,7 +14,7 @@ if getgenv().library then
     getgenv().library:Unload()
 end
 
-local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = '$amuelhook - build id: d9f86a9f1040', open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "$amuelhook", fileext = ".txt"}
+local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = '$amuelhook', open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "$amuelhook", fileext = ".txt"}
 getgenv().library = library
 
 --Locals
@@ -2510,7 +2510,7 @@ function library:Init()
         BackgroundTransparency = 1,
         Text = tostring(self.title),
         Font = Enum.Font.Code,
-        TextSize = 16,
+        TextSize = 17,
         TextColor3 = Color3.new(1, 1, 1),
         TextXAlignment = Enum.TextXAlignment.Left,
         Parent = self.main
