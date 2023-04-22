@@ -22,7 +22,7 @@ function CreateEsp(Player)
     local Updater = game:GetService("RunService").RenderStepped:Connect(function()
     if Player.Character ~= nil and Player.Character:FindFirstChild("Humanoid") ~= nil and Player.Character:FindFirstChild("HumanoidRootPart") ~= nil and Player.Character.Humanoid.Health > 0 and Player.Character:FindFirstChild("Head") ~= nil and getgenv().EspEnabled then
             local Target2dPosition,IsVisible = workspace.CurrentCamera:WorldToViewportPoint(Player.Character.HumanoidRootPart.Position)
-            local scale_factor = 1 / (Target2dPosition.Z * math.tan(math.rad(workspace.CurrentCamera.FieldOfView * 0.5)) * 2) * 100
+            local scale_factor = -2 / (Target2dPosition.Z * math.tan(math.rad(workspace.CurrentCamera.FieldOfView * 0.9)) * 2) * 100
             local width, height = math.floor(40 * scale_factor), math.floor(60 * scale_factor)
             if Config.Box then
                 Box.Visible = IsVisible
@@ -61,7 +61,7 @@ function CreateEsp(Player)
                 Name.Visible = false
             end
             if Config.Health and Config.Names then
-                Name.Text = Player.Name.. '\n' .. math.round(Player.Character.Humanoid.Health) .. math.round(Player.Character.Humanoid.Health / Player.Character.Humanoid.MaxHealth * 100) .. '%'
+                Name.Text = Player.Name.. '\n' .. math.round(Player.Character.Humanoid.Health) .. '\n' .. math.round(Player.Character.Humanoid.Health / Player.Character.Humanoid.MaxHealth * 100) .. '%'
             else
                 Name.Text = Player.Name
             end
